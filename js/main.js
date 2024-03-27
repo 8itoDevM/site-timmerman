@@ -18,3 +18,4 @@ let cars = [
 ];
 
 console.log("teste de github/git");
+console.log("Teste de 1 ou mais alteração ao mesmo tempo, juntamente com 2 arquivos")
