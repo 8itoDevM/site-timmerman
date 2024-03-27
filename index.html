@@ -3,74 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Header</title>
+    <title>Timmerman Car Rental</title>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="/img/logoicon.png" type="image/x-icon">
 </head>
-<body>
-
-    <!--Header-->
+<body class="nav-closed">
     <header>
         <div class="content">
-            <nav>
+            <nav class="nav">
                 <div class="logo">
                     <a href="#"><img src="/img/Logo.png" alt="logo"></a>
                 </div>
-    
-                <ul>
+                <button class="hamburger" onclick="toggleNav()"></button>
+                <ul class="nav-list">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Estoque</a></li>
                     <li><a href="#">Empresa</a></li>
                     <li><a href="#">Contato</a></li>
                 </ul>
     
-                <button>Login</button>
+                <button class="login-bnt">Login</button>
             </nav>
         </div>
     </header>
-    <!--Fim-Header-->
 
     <section class="slider">
-        <div class="slide-content">
-            <input type="radio" name="bnt-radio" id="radio1">
-            <input type="radio" name="bnt-radio" id="radio2">
-            <input type="radio" name="bnt-radio" id="radio3">
-        </div>
+        <div class="slider-content">
+            
+            <!--radio-buttons-->
+            <input type="radio" name="radio-bnt" id="radio1">
+            <input type="radio" name="radio-bnt" id="radio2">
+            <input type="radio" name="radio-bnt" id="radio3">
+            <!--fim-radio-buttons-->
 
-        <div class="slide-box primeiro">
-            <img class="img-desktop" src="img/img-pc1.png" alt="img1pc">
-            <img class="img-mobile" src="img/img-mob1.png" alt="img1mob">
-        </div>
+            <!--slides-imagens-->
+            <div class="slide-box primeiro">
+                <img class="img-desktop" src="/img/img-pc1.png" alt="img1">
+                <img class="img-mob" src="/img/img-mob1.png" alt="img1">
+            </div>
+            <div class="slide-box">
+                <img class="img-desktop" src="/img/img-pc2.png" alt="img2">
+                <img class="img-mob" src="/img/img-mob2.png" alt="img2">
+            </div>
+            <div class="slide-box">
+                <img class="img-desktop" src="/img/img-pc3.png" alt="img2">
+                <img class="img-mob" src="/img/img-mob3.png" alt="img2">
+            </div>
+            
+            <div class="nav-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+            </div>
 
-        <div class="slide-box">
-            <img class="img-desktop" src="img/img-pc2.png" alt="img2pc">
-            <img class="img-mobile" src="img/img-mob2.png" alt="img2mob">
+            <div class="nav-manual">
+                <label class="manual-btn" for="radio1"></label>
+                <label class="manual-btn" for="radio2"></label>
+                <label class="manual-btn" for="radio3"></label>
+            </div>
         </div>
-
-        <div class="slide-box">
-            <img class="img-desktop" src="img/img-pc3.png" alt="img2pc">
-            <img class="img-mobile" src="img/img-mob3.png" alt="img2mob">
-        </div>
-
-        <div class="nav-auto">
-            <div class="auto-bnt1"></div>
-            <div class="auto-bnt2"></div>
-            <div class="auto-bnt3"></div>
-        </div>
-
-        <div class="nav-manual">
-            <label for="radio1" class="manual-bnt"></label>
-            <label for="radio2" class="manual-bnt"></label>
-            <label for="radio3" class="manual-bnt"></label>
-        </div>
-        
     </section>
 
-    <!-- noias do backend abaixo -->
+    <main class="hero">
+
+    </main>
+
+
     <script src="js/main.js"></script>
-
-    <h1>Ignora esse texto aqui</h1>
-    <p>Teste github</p>
-
-    
 </body>
 </html>
