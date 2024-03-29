@@ -46,17 +46,17 @@ function slideHandler(){
 }
 }
 
-function populateCars(carList){
+function populateProducts(productsList){
     //let productSection = document.querySelector(".products-area");
     //productSection.textContent = "";
     // run a loop through the products and create an HTML element ("product-item") for each of them
-    carList.forEach(function(cars, index){
+    productsList.forEach(function(cars, index){
         console.log(cars.name);
     });
 }
 
-function carsHandler(){
-    populateCars(cars);
+function productsHandler(){
+    populateProducts(cars);
 }
 
 // function footerHandler(){
@@ -66,5 +66,5 @@ function carsHandler(){
 
 // handlers
 slideHandler();
-carsHandler();
+productsHandler();
 //footerHandler();
