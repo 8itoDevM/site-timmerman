@@ -46,6 +46,19 @@ function slideHandler(){
 }
 }
 
+function populateCars(carList){
+    //let productSection = document.querySelector(".products-area");
+    //productSection.textContent = "";
+    // run a loop through the products and create an HTML element ("product-item") for each of them
+    carList.forEach(function(cars, index){
+        console.log(cars.name);
+    });
+}
+
+function carsHandler(){
+    populateCars(cars);
+}
+
 // function footerHandler(){
 //     let currentYear = new Date().getFullYear();
 //     document.querySelector("footer").textContent = `${currentYear} - All rights reserved`
@@ -53,4 +66,5 @@ function slideHandler(){
 
 // handlers
 slideHandler();
+carsHandler();
 //footerHandler();
