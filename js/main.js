@@ -28,6 +28,16 @@ var cars = [
     },
   ];
 
+  let statusColors = {
+    "Novo na loja": "#2d9d67", // verde
+    "Destaque da semana": "#4964a4", // azul
+  };
+
+  for (let car of cars) {
+    let statusColor = statusColors[car.status];
+    console.log(`O status do carro é ${car.status} e a cor correspondente é ${statusColor}`);
+  }
+
 
 function slideHandler(){
     var radio = document.querySelector('.manual-btn')
@@ -94,6 +104,7 @@ function populateProducts(productsList){
             productStatusEvents.textContent = car.status;
             productDetails.append(productStatus);
             productStatus.append(productStatusEvents);
+            productStatusEvents.style.backgroundColor = statusColors[car.status];
         } else { productDetails.style.marginTop = "65px"; }
 
         let productNameAndBrand = document.createElement("div");
@@ -131,10 +142,6 @@ function populateProducts(productsList){
         let productKm = document.createElement("p");
         productKm.classList.add("product-km");
         productKm.textContent = car.km > 0 ? car.km.toLocaleString('pt-BR')+"km" : "Novo";
-
-        if(car.km === 0){
-            //productElm.style.backgroundColor = "#393939";
-        }
 
         let buttonSeeMore = document.createElement("button");
         buttonSeeMore.classList.add("button-details");
