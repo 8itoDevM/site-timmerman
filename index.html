@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -7,25 +8,42 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="icon" href="/img/logoicon.png" type="image/x-icon">
 </head>
-<body class="nav-closed">
+<body>
     <header>
-        <div class="content">
-            <nav class="nav">
-                <div class="logo">
-                    <a href="#"><img src="/img/Logo.png" alt="logo"></a>
-                </div>
-                <button class="hamburger" onclick="toggleNav()"></button>
-                <ul class="nav-list">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Estoque</a></li>
-                    <li><a href="#">Empresa</a></li>
-                    <li><a href="#">Contato</a></li>
+        <nav class="nav-bar">
+            <div class="logo">
+               <a href="#"><img src="/img/Logo.png" alt="logo Timmerman Car Rental"></a>
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Estoque</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Empresa</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Contato</a></li>
                 </ul>
-    
-                <button class="login-bnt">Login</button>
-            </nav>
+            </div>
+            <div class="login-button">
+                <button><a href="#">Entrar</a></button>
+            </div>
+
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class="icon" src="/img/menu_white_36dp.svg" alt=""></button>
+            </div>
+        </nav>
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Estoque</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Empresa</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Contato</a></li>
+            </ul>
+
+            <div class="login-button">
+                <button><a href="#">Entrar</a></button>
+            </div>
         </div>
     </header>
+
 
     <section class="slider">
         <div class="slider-content">
@@ -66,9 +84,243 @@
 
     <main class="hero">
 
+        <section class="catalog" id="catalog">
+            <div class="filter-car">
+                <input class="search-input" type="text" placeholder="Busque o seu sonho conosco">
+                <button class="search-button">Buscar</button>
+            </div>
+
+           <div class="pai-produti-area">
+             <div class="products-area">
+                <div class="product-item">
+                    <img src="/img/imagecarFerrari.png" alt="car1">
+
+                    <div class="product-details">
+                        <div class="status-car">
+                            <h5 class="status-events">Destaque da semana</h5>
+                        </div>
+
+                        <div class="status-car-user">
+                           
+                        </div>
+                        <div class="car-title">
+                            <h3 class="product-brand">Ferrari 812</h3>
+                            <p class="product-title">GTS 6.5 V12</p>
+                        </div>
+
+                        <div class="valor-item">
+                            <div class="type-moeda">R$</div>
+                            <p class="valor-car">80.000,00</p>
+                        </div>
+                        <div class="inform-car">
+                            <div class="title-details">
+                                <p class="product-fabrication">2023/2024</p>
+                                <p class="product-km">0 <span class="text-km">KM</span></p>
+                            </div>
+                            
+                        </div>
+
+                        <button type="button" class="button-details">Ver mais</button>
+                    </div>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/imagecarFerrari.png" alt="car1">
+
+                    <div class="product-details">
+                        <div class="status-car">
+                            <h5 class="status-events">Destaque da semana</h5>
+                        </div>
+
+                        <div class="status-car-user">
+                           
+                        </div>
+                        <div class="car-title">
+                            <h3 class="product-brand">Ferrari 812</h3>
+                            <p class="product-title">GTS 6.5 V12</p>
+                        </div>
+
+                        <div class="valor-item">
+                            <div class="type-moeda">R$</div>
+                            <p class="valor-car">80.000,00</p>
+                        </div>
+                        <div class="inform-car">
+                            <div class="title-details">
+                                <p class="product-fabrication">2023/2024</p>
+                                <p class="product-km">0 <span class="text-km">KM</span></p>
+                            </div>
+                            
+                        </div>
+
+                        <button type="button" class="button-details">Ver mais</button>
+                    </div>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/imagecarFerrari.png" alt="car1">
+
+                    <div class="product-details">
+                        <div class="status-car">
+                            <h5 class="status-events">Destaque da semana</h5>
+                        </div>
+
+                        <div class="status-car-user">
+                           
+                        </div>
+                        <div class="car-title">
+                            <h3 class="product-brand">Ferrari 812</h3>
+                            <p class="product-title">GTS 6.5 V12</p>
+                        </div>
+
+                        <div class="valor-item">
+                            <div class="type-moeda">R$</div>
+                            <p class="valor-car">80.000,00</p>
+                        </div>
+                        <div class="inform-car">
+                            <div class="title-details">
+                                <p class="product-fabrication">2023/2024</p>
+                                <p class="product-km">0 <span class="text-km">KM</span></p>
+                            </div>
+                            
+                        </div>
+
+                        <button type="button" class="button-details">Ver mais</button>
+                    </div>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/imagecarFerrari.png" alt="car1">
+
+                    <div class="product-details">
+                        <div class="status-car">
+                            <h5 class="status-events">Destaque da semana</h5>
+                        </div>
+
+                        <div class="status-car-user">
+                           
+                        </div>
+                        <div class="car-title">
+                            <h3 class="product-brand">Ferrari 812</h3>
+                            <p class="product-title">GTS 6.5 V12</p>
+                        </div>
+
+                        <div class="valor-item">
+                            <div class="type-moeda">R$</div>
+                            <p class="valor-car">80.000,00</p>
+                        </div>
+                        <div class="inform-car">
+                            <div class="title-details">
+                                <p class="product-fabrication">2023/2024</p>
+                                <p class="product-km">0 <span class="text-km">KM</span></p>
+                            </div>
+                            
+                        </div>
+
+                        <button type="button" class="button-details">Ver mais</button>
+                    </div>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/imagecarFerrari.png" alt="car1">
+
+                    <div class="product-details">
+                        <div class="status-car">
+                            <h5 class="status-events">Destaque da semana</h5>
+                        </div>
+
+                        <div class="status-car-user">
+                           
+                        </div>
+                        <div class="car-title">
+                            <h3 class="product-brand">Ferrari 812</h3>
+                            <p class="product-title">GTS 6.5 V12</p>
+                        </div>
+
+                        <div class="valor-item">
+                            <div class="type-moeda">R$</div>
+                            <p class="valor-car">80.000,00</p>
+                        </div>
+                        <div class="inform-car">
+                            <div class="title-details">
+                                <p class="product-fabrication">2023/2024</p>
+                                <p class="product-km">0 <span class="text-km">KM</span></p>
+                            </div>
+                            
+                        </div>
+
+                        <button type="button" class="button-details">Ver mais</button>
+                    </div>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/imagecarFerrari.png" alt="car1">
+
+                    <div class="product-details">
+                        <div class="status-car">
+                            <h5 class="status-events">Destaque da semana</h5>
+                        </div>
+
+                        <div class="status-car-user">
+                           
+                        </div>
+                        <div class="car-title">
+                            <h3 class="product-brand">Ferrari 812</h3>
+                            <p class="product-title">GTS 6.5 V12</p>
+                        </div>
+
+                        <div class="valor-item">
+                            <div class="type-moeda">R$</div>
+                            <p class="valor-car">80.000,00</p>
+                        </div>
+                        <div class="inform-car">
+                            <div class="title-details">
+                                <p class="product-fabrication">2023/2024</p>
+                                <p class="product-km">0 <span class="text-km">KM</span></p>
+                            </div>
+                            
+                        </div>
+
+                        <button type="button" class="button-details">Ver mais</button>
+                    </div>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/imagecarFerrari.png" alt="car1">
+
+                    <div class="product-details">
+                        <div class="status-car">
+                            <h5 class="status-events">Destaque da semana</h5>
+                        </div>
+
+                        <div class="status-car-user">
+                           
+                        </div>
+                        <div class="car-title">
+                            <h3 class="product-brand">Ferrari 812</h3>
+                            <p class="product-title">GTS 6.5 V12</p>
+                        </div>
+
+                        <div class="valor-item">
+                            <div class="type-moeda">R$</div>
+                            <p class="valor-car">80.000,00</p>
+                        </div>
+                        <div class="inform-car">
+                            <div class="title-details">
+                                <p class="product-fabrication">2023/2024</p>
+                                <p class="product-km">0 <span class="text-km">KM</span></p>
+                            </div>
+                            
+                        </div>
+
+                        <button type="button" class="button-details">Ver mais</button>
+                    </div>
+                </div>
+           </div>
+        </section>
+
     </main>
 
 
-    <script src="js/main.js"></script>
+    <script src="/main.js"></script>
 </body>
 </html>
