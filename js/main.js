@@ -13,7 +13,7 @@ var cars = [
       price: 35,
       image: "./img/imagecarFerrari.png",
       quality: 0,
-      status:
+      status: ""
     },
     {
         name: "teste",
@@ -21,7 +21,7 @@ var cars = [
         price: 35,
         image: "./img/imagecarFerrari.png",
         quality: 0,
-        status:
+        status: ""
     },
   ];
 
