@@ -1,28 +1,30 @@
 var cars = [
     {
-      name: "Mustang",
-      brand: "Ford",
-      price: 234000,
+      name: "Ferrari 812",
+      brand: "GTS 6.5 V12",
+      price: 6080149,
       image: "./img/imagecarFerrari.png",
-      quality: 0,
-      status: "Destaque da Semana",
+      km: 0,
+      status: "Novo na loja",
       yearFabrication: "2023/2024"
     },
     {
-      name: "teste",
-      brand: "Marie Anne",
-      price: 35,
-      image: "./img/imagecarFerrari.png",
-      quality: 0,
-      status: ""
+      name: "Ford Mustang",
+      brand: "5.0 V8 TI-VCT",
+      price: 350000,
+      image: "./img/mustang.png",
+      km: 29000,
+      status: "Destaque da semana",
+      yearFabrication: "2018/2018"
     },
     {
-        name: "teste",
-        brand: "Marie Anne",
-        price: 35,
-        image: "./img/imagecarFerrari.png",
-        quality: 0,
-        status: ""
+        name: "Peugeot 206",
+        brand: "1.6 PRESENCE",
+        price: 14900,
+        image: "./img/peugeot.jpg",
+        km: 213976,
+        status: "",
+        yearFabrication: "2016/2016"
     },
   ];
 
@@ -59,6 +61,13 @@ function menuShow() {
     }
 }
 
+function formatNumbers(num, numCasasDecimais){
+    return num.toLocaleString('pt-BR', {
+        minimumFractionDigits: numCasasDecimais,
+        maximumFractionDigits: numCasasDecimais
+    });
+} 
+
 function populateProducts(productsList){
     let productSection = document.querySelector(".products-area");
     productSection.textContent = "";
@@ -77,16 +86,19 @@ function populateProducts(productsList){
         let productDetails = document.createElement("div");
         productDetails.classList.add("product-details");
 
-        let productStatus = document.createElement("div");
-        productStatus.classList.add("status-car");
-
-        let productStatusEvents = document.createElement("h5");
-        productStatusEvents.classList.add("status-events");
-        productStatusEvents.textContent = car.status;
+        if(car.status !== ""){
+            let productStatus = document.createElement("div");
+            productStatus.classList.add("status-car");
+            let productStatusEvents = document.createElement("h5");
+            productStatusEvents.classList.add("status-events");
+            productStatusEvents.textContent = car.status;
+            productDetails.append(productStatus);
+            productStatus.append(productStatusEvents);
+        } else { productDetails.style.marginTop = "65px"; }
 
         let productNameAndBrand = document.createElement("div");
         productNameAndBrand.classList.add("car-title");
-
+        
         let productName = document.createElement("h3");
         productName.classList.add("product-brand")
         productName.textContent = car.name;
@@ -103,7 +115,11 @@ function populateProducts(productsList){
 
         let valorCar = document.createElement("p");
         valorCar.classList.add("valor-car");
-        valorCar.textContent = car.price > 0 ? "$"+car.price.toFixed(2) : "Free";
+
+        valorCar.textContent = car.price > 0 ? formatNumbers(car.price, 2) : "Free";
+
+        let informCar = document.createElement("div");
+        informCar.classList.add("inform-car");
 
         let titleDetails = document.createElement("div");
         titleDetails.classList.add("title-details");
@@ -111,22 +127,34 @@ function populateProducts(productsList){
         let productFabrication = document.createElement("p");
         productFabrication.classList.add("product-fabrication");
         productFabrication.textContent = car.yearFabrication;   
-        
+
+        let productKm = document.createElement("p");
+        productKm.classList.add("product-km");
+        productKm.textContent = car.km > 0 ? car.km.toLocaleString('pt-BR')+"km" : "Novo";
+
+        if(car.km === 0){
+            //productElm.style.backgroundColor = "#393939";
+        }
+
+        let buttonSeeMore = document.createElement("button");
+        buttonSeeMore.classList.add("button-details");
+        buttonSeeMore.textContent = "Ver mais";
 
         // Append the product details
-        productDetails.append(productStatus);
         productDetails.append(productNameAndBrand);
         productDetails.append(valorItem);
-        productDetails.append(titleDetails);
+        productDetails.append(informCar);
+        productDetails.append(buttonSeeMore);
 
         // Append car price and currency
         valorItem.append(typeMoeda);
         valorItem.append(valorCar);
 
-        titleDetails.append(productFabrication);
+        informCar.append(titleDetails);
 
-        // Append product status event
-        productStatus.append(productStatusEvents);
+        // Append km and year of fabrication
+        titleDetails.append(productFabrication);
+        titleDetails.append(productKm);
 
         // Append product name and brand
         productNameAndBrand.append(productName);
@@ -142,7 +170,7 @@ function populateProducts(productsList){
 }
 
 function productsHandler(){
-    //populateProducts(cars);
+    populateProducts(cars);
 }
 
 // function footerHandler(){
