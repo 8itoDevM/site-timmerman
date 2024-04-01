@@ -5,7 +5,8 @@ var cars = [
       price: 234000,
       image: "./img/imagecarFerrari.png",
       quality: 0,
-      status: "Destaque da Semana"
+      status: "Destaque da Semana",
+      yearFabrication: "2023/2024"
     },
     {
       name: "teste",
@@ -104,14 +105,25 @@ function populateProducts(productsList){
         valorCar.classList.add("valor-car");
         valorCar.textContent = car.price > 0 ? "$"+car.price.toFixed(2) : "Free";
 
+        let titleDetails = document.createElement("div");
+        titleDetails.classList.add("title-details");
+
+        let productFabrication = document.createElement("p");
+        productFabrication.classList.add("product-fabrication");
+        productFabrication.textContent = car.yearFabrication;   
+        
+
         // Append the product details
         productDetails.append(productStatus);
         productDetails.append(productNameAndBrand);
         productDetails.append(valorItem);
+        productDetails.append(titleDetails);
 
         // Append car price and currency
         valorItem.append(typeMoeda);
         valorItem.append(valorCar);
+
+        titleDetails.append(productFabrication);
 
         // Append product status event
         productStatus.append(productStatusEvents);
@@ -130,7 +142,7 @@ function populateProducts(productsList){
 }
 
 function productsHandler(){
-    populateProducts(cars);
+    //populateProducts(cars);
 }
 
 // function footerHandler(){
