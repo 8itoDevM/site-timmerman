@@ -1,0 +1,26 @@
+{
+  "name": "site-timmerman",
+  "version": "1.0.0",
+  "description": "webstore",
+  "main": "index.js",
+  "scripts": {
+    "test": "console.log(\"ola);"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/8itoDevM/site-timmerman.git"
+  },
+  "keywords": [
+    "webstore",
+    "website",
+    "html",
+    "css",
+    "js"
+  ],
+  "author": "Gustavo Marcolino, João Arthut",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/8itoDevM/site-timmerman/issues"
+  },
+  "homepage": "https://github.com/8itoDevM/site-timmerman#readme"
+}
