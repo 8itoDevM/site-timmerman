@@ -28,6 +28,8 @@ var cars = [
     },
   ];
 
+  let logged = false;
+
   let statusColors = {
     "Novo na loja": "#2d9d67", // verde
     "Destaque da semana": "#4964a4", // azul
