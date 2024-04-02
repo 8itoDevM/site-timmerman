@@ -192,3 +192,4 @@ function productsHandler(){
 slideHandler();
 productsHandler();
 //footerHandler();
+console.log("teste")
