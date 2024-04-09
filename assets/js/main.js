@@ -3,7 +3,7 @@ var cars = [
       name: "Ferrari 812",
       brand: "GTS 6.5 V12",
       price: 6080149,
-      image: "./img/imagecarFerrari.png",
+      image: "./assets/img/imagecarFerrari.png",
       km: 0,
       status: "Novo na loja",
       yearFabrication: "2023/2024"
@@ -12,7 +12,7 @@ var cars = [
       name: "Ford Mustang",
       brand: "5.0 V8 TI-VCT",
       price: 350000,
-      image: "./img/mustang.png",
+      image: "./assets/img/mustang.png",
       km: 29000,
       status: "Destaque da semana",
       yearFabrication: "2018/2018"
@@ -21,7 +21,7 @@ var cars = [
         name: "Peugeot 206",
         brand: "1.6 PRESENCE",
         price: 14900,
-        image: "./img/peugeot.jpg",
+        image: "./assets/img/peugeot.jpg",
         km: 213976,
         status: "",
         yearFabrication: "2016/2016"
