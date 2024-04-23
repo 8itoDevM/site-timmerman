@@ -40,7 +40,7 @@ var cars = [
     console.log(`O status do carro é ${car.status} e a cor correspondente é ${statusColor}`);
   }
 
-
+console.log("Teste 3");
 function slideHandler(){
     var radio = document.querySelector('.manual-btn')
     var cont = 1
